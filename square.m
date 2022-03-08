@@ -1,6 +1,6 @@
 function x = square(amplitude, freq, phase, fs, duration, duty)
-%square: generates a square wave
-%Author: Rebecca Wong
+% square: generates a square wave
+% Author: Rebecca Wong
 
 % amplitude is amplitude of wave
 % freq is frequency of wave
@@ -8,8 +8,8 @@ function x = square(amplitude, freq, phase, fs, duration, duty)
 % fs is sampling frequeney (points per second)
 % duration is time in seconds
 % duty controls on/off time; 
-%   It is the percentage of a waveform that occurs above zero axis (+Amplitude)
-%   duty of 0.5 will return a propper square wave
+%   it is the percentage of a waveform that occurs above the zero axis (+amplitude)
+%   duty of 0.5 will return a propper square wave (equal time at + and - amplitude)
 
     length = fs * duration; % length of matrix
     T = 1/fs; % period 
