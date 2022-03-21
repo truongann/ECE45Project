@@ -21,7 +21,7 @@ function x = hilly(amplitude, freq, phase, fs, duration, duty);
     % x-axis. since the x-axis is evenly spaced, we leave out that info.
     for i = 0:length-1
         t = T*i; % this is the time at each point
-        wave(i) = amplitude * abs(sin(2*pi*freq*t - phase));
+        wave(i+1) = amplitude * abs(sin(2*pi*freq*t - phase));
     end
     
     x = wave;
