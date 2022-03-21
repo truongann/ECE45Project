@@ -14,7 +14,7 @@ function x = sine(amplitude, freq, phase, fs, duration, duty);
     T = 1/fs; % sampling period, the time between two entries in matrix
 
     % generates a 1D matrix w specified length and # of entries
-    wave = linspace(0, length);
+    wave = linspace(0, length, fs);
     
     % populates the matrix we just made. you can think of this matrix as a
     % table, where each entry is the y-value that corresponds to x*i on the
