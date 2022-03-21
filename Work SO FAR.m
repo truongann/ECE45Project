@@ -66,15 +66,17 @@ t = (1:N)/11025;
 Fs = 11025;
 
 fig = uifigure;
-pnl = uipanel(fig);
+pnl = uipanel(fig, 'Position', [150 180 260 221], 'Title', 'Wave Configuration Controls');
 sldVolume = uislider(pnl,'Position',[80 50 150 3]);
-txaVolume = uitextarea(pnl,'Editable', 'Off','Position',[0 40 72 20] , 'Value', {'Volume'});
+txaVolume = uitextarea(pnl,'Editable', 'Off','Position',[0 40 72 20], 'Value', {'Volume'});
 
 sldDuration = uislider(pnl,'Position',[80 100 150 3]);
 txaDuration = uitextarea(pnl,'Editable', 'Off','Position',[0 90 72 20] , 'Value', {'Duration'});
 
 sldAdjustment = uislider(pnl,'Position',[80 150 150 3]);
 txaAdjustment = uitextarea(pnl,'Editable', 'Off', 'Position',[0 140 72 20] , 'Value', {'Adjustment'});
+
+DP = uidropdown(pnl, 'Position', [5, 170, 130, 25], 'Items', {'Saw Tooth Wave'   'Hilly Wave'   'Square Wave'})
 
 %sldVolume = uislider
 %sldDuration = uislider
