@@ -65,13 +65,24 @@ t = (1:N)/11025;
 
 Fs = 11025;
 
-sldVolume = uislider
-sldDuration = uislider
-sldAdjustment = uislider
+fig = uifigure;
+pnl = uipanel(fig);
+sldVolume = uislider(pnl,'Position',[80 50 150 3]);
+txaVolume = uitextarea(pnl,'Editable', 'Off','Position',[0 40 72 20] , 'Value', {'Volume'});
 
-%sldDuration.Value = 1
-%sldVolume.Value = 1
-%sldAdjustment.Value = 1
+sldDuration = uislider(pnl,'Position',[80 100 150 3]);
+txaDuration = uitextarea(pnl,'Editable', 'Off','Position',[0 90 72 20] , 'Value', {'Duration'});
+
+sldAdjustment = uislider(pnl,'Position',[80 150 150 3]);
+txaAdjustment = uitextarea(pnl,'Editable', 'Off', 'Position',[0 140 72 20] , 'Value', {'Adjustment'});
+
+%sldVolume = uislider
+%sldDuration = uislider
+%sldAdjustment = uislider
+
+sldDuration.Value = 1
+sldVolume.Value = 1
+sldAdjustment.Value = 1
 
 % These are the starting functions and they all have 4000 elements. The
 % adjustmentValue variable controls the variable N that is used in the
