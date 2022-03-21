@@ -1,4 +1,4 @@
-function WaveGenerator
+function WaveGeneratorPanel
 
 fig = uifigure;
 pnl = uipanel(fig, 'Position', [5 5 500 400], 'Title', 'Wave Configuration Controls');
