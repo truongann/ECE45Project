@@ -15,7 +15,7 @@ adjustmentValue = 10*sldAdjustment.Value + 1;
 % constant parts are added to the complete that element's calculation for
 % the starting function in question.
 
-for B = 1:40000 
+for B = 1:4000 
     a = 0;
     for k = 1:adjustmentValue
         a = a + sin(pi*k*(1/500)*B)/k;
@@ -23,7 +23,7 @@ for B = 1:40000
     x1(B) = (a*(-1/pi) + 0.5)*sldVolume.Value;
 end
 
-for B = 1:40000 
+for B = 1:4000 
     a = 0;
     for k = 1:adjustmentValue
         a = a + cos(pi*k*B/500)/(4*k^2-1);
