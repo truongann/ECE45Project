@@ -1,4 +1,4 @@
-function x = hilly(amplitude, freq, phase, fs, duration, duty);
+function x = hilly(amplitude, freq, phase, fs, duration)
 % sine: returns a matrix representing a hilly wave (absolute sine)
 % Author: Ann Truong
 
@@ -7,8 +7,6 @@ function x = hilly(amplitude, freq, phase, fs, duration, duty);
 % phase shift is given in periods
 % fs is sampling frequency (ie how many points we look at per second)
 % duration is time in seconds
-% duty is on/off time (not applicable to sinusoids, but included for 
-%   uniformity w other wave generating functions)
 
     length = fs.Value * duration.Value; % length of matrix
     T = 1/fs.Value; % sampling period, the time between two entries in matrix

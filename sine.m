@@ -1,4 +1,4 @@
-function x = sine(amplitude, freq, phase, fs, duration, duty);
+function x = sine(amplitude, freq, phase, fs, duration)
 % sine: returns a matrix representing a sine wave
 % Author: Ann Truong
 
