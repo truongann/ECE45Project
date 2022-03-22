@@ -1,11 +1,8 @@
-function x = plotWave(waveform, fs, duration)
-% plotWave: plots a wave on a xy graph
-% Author: Rebecca Wong
+function t = plotWave(sldDuration, fs, waveform)
 
-% when using, make sure your plot duration and fs match those of your waveform
-
-    x = linspace(0, duration, fs*duration);
-    plot(x, waveform);
+t = linspace(0, sldDuration.Value*fs.Value, sldDuration.Value);
+    plot(t, waveform);
     xlabel("Time");
     ylabel("Amplitude");
+    
 end
