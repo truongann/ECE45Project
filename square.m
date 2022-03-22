@@ -11,8 +11,8 @@ function x = square(amplitude, freq, phase, fs, duration, duty)
 %   it is the percentage of a waveform that occurs above the zero axis (+amplitude)
 %   duty of 0.5 will return a propper square wave (equal time at + and - amplitude)
 
-    length = fs * duration; % length of matrix
-    T = 1/fs; % period 
+    length = fs.Value * duration.Value; % length of matrix
+    T = 1/fs.Value; % period 
     x = zeros(1, length); % generates matrix of size 1 by length
     
     for i = 1:n
@@ -22,9 +22,9 @@ function x = square(amplitude, freq, phase, fs, duration, duty)
         
     
         if(st < duty)
-            x(i) = amplitude;
+            x(i) = amplitude.Value;
         else
-            x(i) = -amplitude;
+            x(i) = -amplitude.Value;
         end
     end
 end

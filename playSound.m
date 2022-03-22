@@ -1,4 +1,4 @@
-function playSound()
+function playSound(sldDuration, sldAdjustment, sldVolume)
 
 x1 = (1:4000*sldDuration.Value + 1); % Saw Tooth Wave
 x2 = (1:4000*sldDuration.Value + 1); % Hilly Wave
