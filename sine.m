@@ -1,10 +1,9 @@
-function x = sine(phase, fs, duration)
+function x = sine(fs, duration)
 % sine: returns a matrix representing a sine wave
 % Author: Ann Truong
 
 % amplitude is amplitude of wave
 % freq is frequency of wave
-% phase shift is given in periods
 % fs is sampling frequency (ie how many points we look at per second)
 % duration is time in seconds
 % duty is on/off time (not applicable to sinusoids, but included for 

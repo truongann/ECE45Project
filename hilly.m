@@ -1,10 +1,9 @@
-function x = hilly(amplitude, freq, phase, fs, duration)
+function x = hilly(amplitude, freq, fs, duration)
 % sine: returns a matrix representing a hilly wave (absolute sine)
 % Author: Ann Truong
 
 % amplitude is amplitude of wave
 % freq is frequency of wave
-% phase shift is given in periods
 % fs is sampling frequency (ie how many points we look at per second)
 % duration is time in seconds
 

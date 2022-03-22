@@ -1,10 +1,9 @@
-function x = square(amplitude, freq, phase, fs, duration, duty)
+function x = square(amplitude, freq, fs, duration, duty)
 % square: generates a square wave
 % Author: Rebecca Wong
 
 % amplitude is amplitude of wave
 % freq is frequency of wave
-% phase shift is given in periods
 % fs is sampling frequeney (points per second)
 % duration is time in seconds
 % duty controls on/off time; 
