@@ -1,4 +1,4 @@
-function x = sine(amplitude, freq, phase, fs, duration)
+function x = sine(phase, fs, duration)
 % sine: returns a matrix representing a sine wave
 % Author: Ann Truong
 
@@ -9,7 +9,8 @@ function x = sine(amplitude, freq, phase, fs, duration)
 % duration is time in seconds
 % duty is on/off time (not applicable to sinusoids, but included for 
 %   uniformity w other wave generating functions)
-
+    
+    freq = 10000;
     length = fs.Value * duration.Value; % length of matrix
     T = 1/fs.Value; % sampling period, the time between two entries in matrix
 
@@ -21,7 +22,7 @@ function x = sine(amplitude, freq, phase, fs, duration)
     % x-axis. since the x-axis is evenly spaced, we leave out that info.
     for i = 1:length
         t = T*i; % this is the time at each point
-        wave(i) = amplitude.Value * sin(2*pi*freq*t - phase);
+        wave(i) = sin(2*pi*freq*t - phase);
     end
     
     x = wave;
