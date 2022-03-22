@@ -16,6 +16,7 @@ uitextarea(pnl,'Editable', 'Off', 'Position',[15 190 72 20] , 'Value', {'Adjustm
 
 DP = uidropdown(pnl, 'Position', [15, 250, 130, 25], 'Items', {'Saw Tooth Wave'   'Hilly Wave'   'Square Wave'})
 
-button = uibutton(pnl, 'Position', [350 100 100 25], 'Text', {'Play Sound'}, 'ButtonPushedFcn', @(button,event) playSound(sldDuration, sldAdjustment, sldVolume));
+button = uibutton(pnl, 'Position', [350 100 100 25], 'Text', {'Play Sound'}, 'ButtonPushedFcn', @(button,event) plotWave(sldDuration, fs, x3));
+button = uibutton(pnl, 'Position', [350 150 100 25], 'Text', {'Plot Wave'}, 'ButtonPushedFcn', @(button,event) playSound(sldDuration, sldAdjustment, sldVolume));
 
 end
