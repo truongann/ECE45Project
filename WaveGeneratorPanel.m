@@ -8,8 +8,11 @@ uitextarea(pnl,'Editable', 'Off','Position',[15 40 72 20] , 'Value', {'Volume'})
 sldDuration = uislider(pnl,'Position',[100 100 150 3]);
 uitextarea(pnl,'Editable', 'Off','Position',[15 90 72 20] , 'Value', {'Duration'});
 
-sldAdjustment = uislider(pnl,'Position',[100 150 150 3]);
-uitextarea(pnl,'Editable', 'Off', 'Position',[15 140 72 20] , 'Value', {'Adjustment'});
+fs = uislider(pnl,'Position',[100 150 150 3]);
+uitextarea(pnl,'Editable', 'Off','Position',[15 125 72 40] , 'Value', {'Sample Freq'});
+
+sldAdjustment = uislider(pnl,'Position',[100 200 150 3]);
+uitextarea(pnl,'Editable', 'Off', 'Position',[15 190 72 20] , 'Value', {'Adjustment'});
 
 DP = uidropdown(pnl, 'Position', [15, 200, 130, 25], 'Items', {'Saw Tooth Wave'   'Hilly Wave'   'Square Wave'})
 
