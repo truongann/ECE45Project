@@ -14,7 +14,7 @@ uitextarea(pnl,'Editable', 'Off','Position',[15 125 72 40] , 'Value', {'Sample F
 sldAdjustment = uislider(pnl,'Position',[100 200 150 3], 'Limit', [1 100]);
 uitextarea(pnl,'Editable', 'Off', 'Position',[15 190 72 20] , 'Value', {'Adjustment'});
 
-DP = uidropdown(pnl, 'Position', [15, 200, 130, 25], 'Items', {'Saw Tooth Wave'   'Hilly Wave'   'Square Wave'})
+DP = uidropdown(pnl, 'Position', [15, 250, 130, 25], 'Items', {'Saw Tooth Wave'   'Hilly Wave'   'Square Wave'})
 
 button = uibutton(pnl, 'Position', [350 100 100 25], 'Text', {'Play Sound'}, 'ButtonPushedFcn', @(button,event) playSound(sldDuration, sldAdjustment, sldVolume));
 
