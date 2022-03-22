@@ -1,8 +1,8 @@
-function t = plotWave(sldDuration, sldAdjustment, sldVolume, fs, waveform)
+function t = plotWave(sldDuration, fs, waveform)
 
-t = linspace(0, sldDuration.Value, fs.Value*sldDuration.Value);
+t = linspace(0, sldDuration.Value*fs.Value, sldDuration.Value);
     plot(t, waveform);
-    tlabel("Time");
+    xlabel("Time");
     ylabel("Amplitude");
     
 end
