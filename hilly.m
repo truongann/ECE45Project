@@ -19,9 +19,9 @@ function x = hilly(amplitude, freq, phase, fs, duration, duty);
     % populates the matrix we just made. you can think of this matrix as a
     % table, where each entry is the y-value that corresponds to x*i on the
     % x-axis. since the x-axis is evenly spaced, we leave out that info.
-    for i = 0:length-1
+    for i = 1:length
         t = T*i; % this is the time at each point
-        wave(i+1) = amplitude * abs(sin(2*pi*freq*t - phase));
+        wave(i) = amplitude * abs(sin(2*pi*freq*t - phase));
     end
     
     x = wave;
