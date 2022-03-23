@@ -1,9 +1,7 @@
-function x = hilly(amplitude, freq, fs, duration)
+function x = hilly(amplitude, fs, duration)
 % sine: returns a matrix representing a hilly wave (absolute sine)
-% Author: Ann Truong
 
 % amplitude is amplitude of wave
-% freq is frequency of wave
 % fs is sampling frequency (ie how many points we look at per second)
 % duration is time in seconds
 
@@ -18,7 +16,7 @@ function x = hilly(amplitude, freq, fs, duration)
     % x-axis. since the x-axis is evenly spaced, we leave out that info.
     for i = 1:length
         t = T*i; % this is the time at each point
-        wave(i) = amplitude.Value * abs(sin(2*pi*freq*t - phase));
+        wave(i) = amplitude.Value * abs(sin(2*pi*t));
     end
     
     x = wave;

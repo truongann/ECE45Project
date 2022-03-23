@@ -1,5 +1,6 @@
-function superposition(selectedWave, sldDuration, sldAdjustment, sldVolume)
+function sum = superposition(selectedWave, sldDuration, fs)
 
-baseSine = sine(sldAdjustment, sldDuration);
+    baseSine = sine(sldDuration, fs);
 
-superposition = baseSine + selectedWave;
+    sum = baseSine + selectedWave;
+end
